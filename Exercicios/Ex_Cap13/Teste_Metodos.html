@@ -51,7 +51,7 @@
             console.log(arr_obj.indexOf('B'));
 
             //lastindexOf
-            console.log(arr_obj.lastIndexOf('B'));    
+            console.log(arr_obj.lastIndexOf('B'));
 
             //map (retorna um array com os elementos manipulados)
             console.log('Map');
@@ -96,13 +96,23 @@
             //slice (seleciona elementos de um array)
             console.log('slice', arr_lit.slice(1,2));
 
+            //splice adiciona e remove eleentos de um array
+            var fruits = ["Banana", "Orange", "Apple", "Mango", "Teste"];
+            fruits.splice(1, 0, "Abacaxi");
+            console.log(fruits);
+            fruits.splice(1, 1, "Morango");
+            console.log(fruits);
+
+            //unshift adiciona elementos no inicio de um array
+            fruits.unshift("Melacia", "Melão");
+            console.log(fruits);
+
+            console.log(fruits.toString());
+
+            fruits.push(...arr_lit);
+            console.log(fruits);
 
 
-
-            
-
-     
-            
         </script>
         
     </head>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <input type="number" name="num_1" id="num_1" value="10"/>
+    <input type="number" name="num_2" id="num_2" value="20"/>
+    <button onclick="gerarTabela()">Calcular</button>
+
+    <div id="resultados">
+        <!--<table>
+            <tbody>
+                <tr>
+                    <td>Soma</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>-->
+    </div>
+
+    <script>
+        function calcularEntradas(){
+            let num_1 = document.getElementById('num_1').value;
+            let num_2 = document.getElementById('num_2').value;
+
+            const total = {};
+
+            total.soma = parseFloat(num_1) + parseFloat(num_2);
+            total.subtracao = num_1 - num_2;
+            total.divisao = num_1 / num_2;
+            total.multiplicacao = num_1 * num_2;
+
+            return total;
+        }
+
+        function gerarTabela() {
+            var $table = document.createElement('table');
+            var res = calcularEntradas();
+            for (var a in res){
+                var $tr = document.createElement('tr');
+                var $td_op = document.createElement('td');
+                var $td_val = document.createElement('td');
+
+                $td_op.innerHTML = a;
+                $td_val.innerHTML = res[a];
+                $tr.appendChild($td_op);
+                $tr.appendChild($td_val);
+                $table.appendChild($tr);
+            }
+            var div_tb = document.getElementById('resultados');
+            var old_table = div_tb.getElementsByTagName('table');
+            if(old_table.length !== 0){
+                div_tb.removeChild(old_table[0]);
+            }
+            div_tb.appendChild($table);
+        }
+
+    </script>
+</body>
+</html>
