@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>      
+        
+        <script>                    
+
+           // ES5
+           function Cachorro(nome){
+
+               this.setNome = function(nome){
+                    this.nome = nome;
+               }     
+
+               this.getNome = function(nome){
+                    return this.nome;
+               }
+               
+               if( this instanceof Cachorro ){
+                   this.setNome(nome);
+               }else{
+                   throw new Error('Parâmetros inválidos para esta classe');
+               }
+                          
+           }  
+
+           //ES6
+           class Veiculo{
+                constructor(nome, tipo){
+                    this.nome = nome;
+                    this.tipo = tipo;
+                }
+           }  
+           
+                        
+        </script>
+        
+    </body>
+</html>

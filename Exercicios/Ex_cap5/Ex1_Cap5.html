@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>                 
+            
+            //IIFE - Immediately-invoked function expression
+            (function(){
+                'use strict';              
+                
+                function CalcularMedia(){
+                    console.log(arguments.length); 
+
+                    console.log(typeof arguments);
+
+                    var total = 0;
+                    var x = 0;
+
+                    while(arguments[x]){
+                        total += arguments[x];
+                        x++;
+                    }
+
+                    console.log(total/arguments.length);                   
+                    
+                }
+                
+                CalcularMedia(20, 20, 10, 5, 5, 15);
+            })();              
+            
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>  
+    </body>
+</html>

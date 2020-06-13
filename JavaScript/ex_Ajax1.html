@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">    
+        
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>      
+        
+        <dl id="lista-usuarios">
+            <dt>nome</dt>
+            <dd>email</dd>
+        </dl>
+
+        <script>
+
+            let xhr = new XMLHttpRequest();
+            let url = "https://jsonplaceholder.typicode.com/users/";
+
+            function getUser(id){
+                debugger
+                xhr.open("GET", url+id);
+                xhr.send(null);
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4){
+                        if(xhr.status === 200 || xhr.status === 304){
+                            console.log(JSON.parse(xhr.response));
+                        }else{
+                            console.log("Erro na consulta dos dados");
+                        }
+                    }
+                }
+            }
+
+
+        </script>
+    </body>

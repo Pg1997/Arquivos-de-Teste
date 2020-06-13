@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <h1 id="msg">Curso Javascript Completo 2018</h1> 
+        <input type="text" id="nome" name="nome"> 
+        
+        <p> Lorem ipsum....</p>
+        <p> Lorem ipsum....</p>
+        <p> Lorem ipsum....</p>
+        <div>
+            <p> Lorem ipsum....</p>
+            <p> Lorem ipsum....</p>
+            <div>
+                <p> Lorem ipsum....</p>
+                <p> Lorem ipsum....</p>
+            </div>
+        </div>
+        <script> 
+
+            var nome = 'Paulo';
+            var sobrenome = 'Gabriel';
+
+            function DarMsg(){
+                var $inputNome =  document.getElementById('nome');
+                $inputNome.value = nome + ' ' + sobrenome;
+                $inputNome.readOnly = true;
+            }              
+            
+            DarMsg();
+            
+        </script>
+    </body>
+</html>

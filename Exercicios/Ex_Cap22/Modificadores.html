@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>      
+        
+        <script>                    
+            //Herança por prototype
+           function Animal(nome){
+                this.nome = nome;
+           }
+
+           function Cachorro(nome, raca){
+               this.raca = raca;
+               Animal.call(this, nome);
+               this.getNome = function(){
+                   return this.nome;
+               }
+           }
+
+           Cachorro.prototype = new Animal();
+
+           //Herança por extends
+           class Veiculo{
+               constructor(tipo){
+                    this.tipo = tipo;
+               }
+
+                getTipo(){
+                   return this.tipo;
+               }
+           }
+
+           class Terrestre extends Veiculo{
+                constructor(tipo, nome){
+                    super(tipo);
+                    this.nome = nome;                    
+                }
+
+                getNome(){
+                    return this.nome;
+                }
+
+                toString(){
+                    return this;
+                }
+           }
+           
+                        
+        </script>
+        
+    </body>
+</html>

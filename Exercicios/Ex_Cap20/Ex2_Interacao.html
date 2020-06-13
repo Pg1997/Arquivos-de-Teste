@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>      
+        
+        <script>
+
+           function Animal(tipo){
+                if(tipo) this.tipo = tipo;
+           }                    
+
+           function Cachorro(nome, idade, tipo){
+               if(nome) this.nome = nome;               
+
+               if(idade && typeof idade === 'number') this.idade = idade;
+
+               Animal.prototype.tipo = tipo;
+
+               this.setNome = function(nome){
+                    this.nome = nome;
+               }     
+
+               this.getNome = function(nome){
+                    return this.nome;
+               }           
+           }
+
+           Cachorro.prototype = new Animal();          
+
+           var dog = new Cachorro('Rex', 10, 'Mamifero');
+
+           //Faz a cópia do dog
+           var dog2 = Object.create(dog);
+
+           for(var prop in dog){
+                if(dog.hasOwnProperty(prop)){
+                    console.log(prop);
+                }
+           }
+           
+                        
+        </script>
+        
+    </body>
+</html>

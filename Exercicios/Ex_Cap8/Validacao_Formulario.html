@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+
+        <div>
+            <form id="formulario">
+                <input type="text" id="login" name="login">
+                <input type="password" id="senha" name="senha">
+                <input type="submit" id="enviar" name="enviar">
+            </form>
+        </div>
+        
+        <script>
+            
+            var $btSub = document.querySelector('#formulario');
+            var $edtLogin = document.querySelector('#login');
+            var $edtSenha = document.querySelector('#senha');
+            
+            $btSub.addEventListener('submit', function(e){
+                if($edtLogin.value == '' || $edtSenha.value == ''){
+                    console.log('Teste 1');
+                    e.preventDefault();
+                    console.log('Teste 2');
+                }else{
+                    e.preventDefault();
+                    console.log('Você está logado');
+                }
+            })
+                        
+        </script>
+        
+    </body>
+</html>

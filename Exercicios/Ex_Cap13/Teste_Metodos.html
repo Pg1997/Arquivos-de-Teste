@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>                 
+            var arr_obj = new Array('A', 'B', 'C');
+            var arr_lit = [1, 2, 3, 4, 5];
+
+            console.log(arr_obj);
+            console.log(arr_lit);
+
+            console.log(arr_obj.length);
+            console.log(arr_lit.length);
+
+            //every (verifica se todos os elementos passam na verificação)
+            var teste = arr_lit.every((el) => {
+                if(el%2 === 0 ){                    
+                    return true;
+                }else{                   
+                    return false;
+                }
+            });
+
+            console.log(teste);
+
+            teste = arr_lit.every((el) => {
+                if(el > 0 ){                    
+                    return true;
+                }else{                   
+                    return false;
+                }
+            });
+
+            console.log(teste);
+
+
+            //filter (retorna um array com os valores true)
+            var teste = arr_lit.filter((el) => {
+                if(el%2 === 0 ){                    
+                    return true;
+                }else{                   
+                    return false;
+                }
+            });
+
+            console.log(teste);
+
+            //indexOf
+            console.log(arr_obj.indexOf('B'));
+
+            //lastindexOf
+            console.log(arr_obj.lastIndexOf('B'));    
+
+            //map (retorna um array com os elementos manipulados)
+            console.log('Map');
+            console.log(arr_lit.map((el) => {
+                return el % 3;
+            }))
+
+            // some (verifica se algum dos elementos passa na verificação)
+            var teste = arr_lit.some((el) => {
+                if(el%2 === 0 ){                    
+                    return true;
+                }else{                   
+                    return false;
+                }
+            });
+
+            console.log(teste);
+
+            //concat (junta dois arrays)
+            console.log(arr_obj.concat(arr_lit));
+
+            //join (transforma o array em uma string)
+            console.log(arr_obj.join(', '));
+
+            //pop (remove um elemento)
+            console.log(arr_lit.pop());
+
+            //push (adiciona um elemento)
+            console.log(arr_lit.push(10), arr_lit);
+
+            //reduce 
+            console.log(arr_lit.reduce((total, el) => {
+                return total += el;
+            }));
+
+            //reverse
+            console.log(arr_obj.reverse());
+            
+            //shift
+            console.log(arr_lit.shift(), arr_lit);    
+
+            //slice (seleciona elementos de um array)
+            console.log('slice', arr_lit.slice(1,2));
+
+
+
+
+            
+
+     
+            
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>  
+    </body>
+</html>

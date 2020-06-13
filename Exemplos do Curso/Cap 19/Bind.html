@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+            
+            function teste(a){
+                if (this.hasOwnProperty(a)){
+                    console.log('Possui metodo');
+                }else{
+                    console.log(a);
+                }                
+            }
+            
+            var obj = {
+                texugo: () => console.log('Função de teste')
+            }
+
+            var teste2 = teste.bind(obj, 'metodo');
+            
+            document.addEventListener('click', teste2)
+            
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>      
+         
+        
+    </body>
+</html>

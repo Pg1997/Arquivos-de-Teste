@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>      
+        
+        <script>
+            
+           var numObj = {
+               num: 0,
+               add: function(a){
+                    if(a && typeof a === 'number'){
+                        this.num += a;
+                    }
+
+                    return this;
+               },
+
+               get: function(){
+                    console.log(this.num);
+                    return this;
+               }
+           }
+
+           function StrObj(str){
+                this.str = str || '';
+
+                this.getStr = function(){
+                    console.log(this.str);
+                    return this;
+                }
+
+                this.setStr = function(str){
+                    this.str = str;
+                    return this;
+                }
+           }
+
+           StrObj.prototype.toString = function (){
+               console.log(this);
+           }
+
+           var objString = new StrObj('Teste');
+                        
+        </script>
+        
+    </body>
+</html>

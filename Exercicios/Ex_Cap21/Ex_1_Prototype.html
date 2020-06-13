@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>      
+        
+        <script>
+
+           //Herança com prototype 
+           function Animal(tipo){
+               if(tipo) this.tipo = tipo;
+           }
+
+           Animal.prototype.getTipo = function(){
+               console.log(this.tipo);
+           }
+
+           Animal.prototype.setTipo = function(arg){
+                this.tipo = arg;
+           }
+
+           function Cachorro(nome, tipo){
+               if(nome) this.nome = nome;
+
+               Animal.call(this, tipo);
+           }
+
+           Cachorro.prototype = new Animal();
+
+           var dog = new Cachorro('Rex', 'Mamifero');
+
+           var dog2 = Object.create(dog);
+
+           //Emprestando o método de outro objeto
+           function mostraArg(){
+               console.log(arguments);
+               Array.prototype.forEach.call(arguments, function(argument){
+                    console.log('Arg: ' + argument);
+               })
+           }
+                        
+        </script>
+        
+    </body>
+</html>
