@@ -1,0 +1,38 @@
+body{
+    margin: 0px;    
+}
+
+.container{
+    width: 100px;
+    height: 100px;
+}
+
+#a{
+    background-color: green;
+    position: relative;
+    left: 100px;
+}
+
+#b{
+    background-color: yellow; 
+    position: absolute;
+    top: 0px;
+}
+
+#c{
+    background-color: blue;
+    position: fixed;
+    bottom: 0px; 
+    left: 45%;
+}
+
+#d{
+    background-color: red;
+    position: sticky;
+    top: 0px;    
+    left: 50%;
+}
+
+#e{
+    height: 3000px;
+}

@@ -1,0 +1,26 @@
+.container{
+    width: 100px;
+    height: 100px;
+}
+
+
+#a{
+    background-color: green;
+    margin-top: 200px;
+    float: left;
+}
+
+#b{
+    background-color: yellow;
+    margin-top: 200px;
+    float: right;
+}
+
+#c{
+    background-color: blue;
+    clear: left;
+}
+
+#d{
+    background-color: red;
+}
