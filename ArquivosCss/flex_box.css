@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    width: 20%;
+    margin: 20px;
+    background-color: beige;
+    border: 2px solid black; 
+    justify-content: space-evenly;
+}
+
+
+.item{
+    background-color: cornflowerblue;
+}
+
+
+/*
+Properiedades do Container
+display: (flex) define um container flex e define seus filhos diretos como flex itens
+flex-direction: (row / row-reverse / column/ column-reverse) define a direção dos itens de um container flex o padrão é row
+flex-wrap: (nowrap / wrap / wrap-reverse) propriedade usada para quando o conteúdo de um container ultrapassa o limite
+flex-flow: é a junção das duas propriedades acima citadas
+justify-content: flex-start / flex-end / center / space-between / space-around faz o alinhamentos dos itens 
+align-items: stretch / flex-start / flex-end / center / baseline
+align-content: stretch / flex-start / flex-end / center / space-between / space-around
+
+Propriedades do Item
+flex-grow: 0 / numero define o quanto um item irá crescer, quando o valor for zero os itens iram crescer conforme seu conteúdo, caso seja definido um numero os itens tentaram ficar no mesmo tamanho
+flex-basis: auto / numero define o comprimento de um item 
+flex-shrink: 0 / n define a redução dos elementos
+flex: junção das três propriedades anteriores
+order: define a ordem dos elementos (pode ser negativo)
+
+align-self: 
+align-self: auto;
+// Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.
+align-self: flex-start;
+// Alinha o item ao início.
+align-self: flex-end;
+// Alinha o item ao final.
+align-self: center;
+// Alinha o item ao centro.
+align-self: baseline;
+// Alinha o item a linha de base.
+align-self: stretch;
+
+*/

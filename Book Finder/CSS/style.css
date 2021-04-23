@@ -1,0 +1,80 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #adc1eb;
+}
+
+.container{    
+    background-color: #c0cde7;
+    width: 80%;
+    margin: auto;
+    display: block;
+    height: 100%;
+}
+
+/*Formulário de consulta*/
+.search-box{
+    width: 100%;
+    height: 20%;
+}
+form{
+    width: fit-content;      
+    position: relative;
+    top: 50%;    
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+input[type="text"]{
+    width: 500px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #cce6ff;
+}
+
+
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    background-image: linear-gradient(#ffffff, #cccccc);
+    border-radius: 8px;
+    border: 1px solid #cce6ff;
+}
+
+/*Conteudo resltado da busca*/
+.search-result{
+    padding: 25px;
+    display: flex;
+}
+
+.book{
+    box-shadow: 2px 2px 12px black;
+    padding: 10px;
+    width: 500px;    
+}
+
+.info{
+    padding: 5px;
+    background-color: red;
+    width: 70%;
+    float: right;
+    /* width: 40%; */
+    /* clear: both; */
+}
+
+.img{
+    /* position: relative;
+    top: 0;
+    left: 0;*/
+    width: 25%; 
+    float: left;    
+}
+
+
