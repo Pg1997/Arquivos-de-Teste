@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;    
+}
+
+body{
+    background-color: beige;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    max-width: 100%;
+    width: 500px;
+    margin: auto;    
+}
+
+.tasks{
+    background-color: white;
+    /* border-radius: 0px 0px 5px 5px; */
+    /* box-shadow: 1px 1px 5px black;     */
+}
+
+form{
+    display: flex;    
+    background-color: white;
+}
+
+form input{
+    border: none;    
+}
+
+form input[type="text"]{
+    width: 95%;    
+}
+
+form input[type="checkbox"]{
+    width: 5%;    
+}
+
+ul{
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;   
+    margin: 0px; 
+}
+
+li:hover{
+    background-color: rgba(187, 187, 187, 0.247);
+}
+
+.check{
+    background-color: red;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    color: rgb(87, 7, 7);
+    opacity: 0.2;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.task label{
+    width: 80%;
+}
+
+.finished{
+    text-decoration: line-through;
+    color: rgb(187, 187, 187);
+}
+
+.footer{
+    display: flex;
+    font-size: 11px;
+    border-radius: 0px 0px 5px 5px;
+    /* box-shadow: 1px 1px 5px black;     */
+    background-color: white;
+    padding: 5px 0px;
+}
+
+.footer span{
+    display: block;
+    width: 20%;
+    text-align: center;
+}
+
+#filter{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;    
+}
+
+.selected{
+    border-bottom: 1px solid orange;
+}
+

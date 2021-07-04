@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html, body{
     height: 100%;
 }
@@ -5,68 +7,100 @@ html, body{
 body{
     margin: 0;
     padding: 0;
-    background-color: #adc1eb;
+    background-color: #adc1eb;    
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
 }
 
 .container{    
     background-color: #c0cde7;
     width: 80%;
     margin: auto;
-    display: block;
-    height: 100%;
+    display: block;    
 }
+
+/* Header */
+
+header{
+    text-align: center;    
+    color: #ff9900;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.5em;
+}
+
 
 /*Formulário de consulta*/
 .search-box{
     width: 100%;
-    height: 20%;
-}
-form{
-    width: fit-content;      
-    position: relative;
-    top: 50%;    
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    height: 100px;
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
 }
 
 input[type="text"]{
-    width: 500px;
+    width: 500px;    
     height: 25px;
     font-size: 20px;
-    border-radius: 8px;
-    border: 1px solid #cce6ff;
+    --border-radius: 8px;
+    border: 1px solid #c0cde7;
 }
 
-
-input[type="submit"]{
+.button{
     width: 100px;
     height: 30px;
     font-size: 20px;
+    --font-family: 'Roboto';
     background-image: linear-gradient(#ffffff, #cccccc);
-    border-radius: 8px;
-    border: 1px solid #cce6ff;
+    --border-radius: 8px;
+    border: 1px solid #c0cde7;
+}
+
+input[type="button"]:hover{
+    border: 2px solid lightblue;    
+}
+
+.button-onClick{
+    background-image: linear-gradient(#cccccc, #ffffff); 
 }
 
 /*Conteudo resltado da busca*/
+#totalizador{
+    width: 100%;
+    text-align: center;
+}
+
 .search-result{
     padding: 25px;
     display: flex;
+    justify-content: space-around;
+    align-content: space-around ;
+    flex-wrap: wrap;
 }
 
 .book{
-    box-shadow: 2px 2px 12px black;
-    padding: 10px;
-    width: 500px;    
+    box-shadow: 1px 1px 7px black;    
+    width: 45%;    
+    margin: 20px;
+    background-color: white;
+}
+
+.book-title{
+    margin: 10px 5px;
+    font-size: 15px;
+    color: orange;
+    text-shadow: 1px 1px 1px black;
 }
 
 .info{
-    padding: 5px;
-    background-color: red;
-    width: 70%;
+    --padding: 5px;
+    --background-color: red;
+    margin: 10px 10px 10px 5px;
+    width: 65%;
     float: right;
-    /* width: 40%; */
-    /* clear: both; */
+}
+
+.info > div{
+    margin: 3px 3px 3px 5px;    
 }
 
 .img{
@@ -75,6 +109,18 @@ input[type="submit"]{
     left: 0;*/
     width: 25%; 
     float: left;    
+    margin: 5px 0px 10px 10px;
 }
 
+/*Rodapé */
+footer{
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+}
+
+footer span{
+    color: #ff9900;
+    text-shadow: 1px 1px 1px black;
+}
 

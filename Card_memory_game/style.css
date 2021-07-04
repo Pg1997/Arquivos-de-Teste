@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+    width: 100%;    
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header h1{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color:darkblue;
+    text-shadow: 1px 1px 5px red;
+}
+
+#info{
+    display: flex;
+    list-style-type: none;
+    width: 30%;
+    justify-content: space-around;    
+    margin: auto;
+}
+
+#info li{
+    flex-basis: 150px;
+    background-color: beige;
+    line-height: 50px;
+}
+
+/* Grid com os cards */
+
+.container{
+    display: grid;
+    width: 430px;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: auto;
+    grid-template-columns: auto auto auto auto;    
+    margin-top: 20px;
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: red;     
+}
+
+
+
+.content, .backface{
+    width: 100px;
+    height: 100px;
+    position: absolute;    
+    border: 1px solid black;
+    font-size: 50px;  
+    text-align: center;
+    line-height: 100px;  
+}
+
+.content{
+    visibility: hidden;
+    background-color: lightyellow;
+}
+
+.backface{
+    visibility: visible;
+    background-color: rgb(148, 148, 9);
+}
+
+/* .card::before{
+    background-color: blue;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    content: "";
+} */
+
+
+
+
